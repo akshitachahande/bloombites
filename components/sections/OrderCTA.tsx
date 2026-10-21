@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/Button";
+import { OpenFormButton } from "@/components/forms/OpenFormButton";
 
 /** Figma "Order" (desktop 23:1195, mobile 24:4065). */
 export function OrderCTA() {
@@ -35,10 +35,12 @@ export function OrderCTA() {
         </p>
 
         <div className="mt-[37px] flex flex-col items-start gap-[34px] lg:mt-[54px] lg:flex-row lg:gap-8">
-          <Button icon="gift">Send a Gift Box</Button>
-          <Button variant="blossom" icon="calendar">
+          <OpenFormButton form="gift" icon="gift">
+            Send a Gift Box
+          </OpenFormButton>
+          <OpenFormButton form="delivery" variant="blossom" icon="calendar">
             Schedule a Delivery
-          </Button>
+          </OpenFormButton>
         </div>
       </div>
     </section>
