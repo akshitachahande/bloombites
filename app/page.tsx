@@ -1,6 +1,7 @@
 import { Branches } from "@/components/sections/Branches";
 import { FeaturedBakes } from "@/components/sections/FeaturedBakes";
 import { Hero } from "@/components/sections/Hero";
+import { OrderCTA } from "@/components/sections/OrderCTA";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <FeaturedBakes />
       <Branches />
+      <OrderCTA />
     </main>
   );
 }
