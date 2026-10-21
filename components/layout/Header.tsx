@@ -1,6 +1,6 @@
 import Link from "next/link";
+import { OpenFormButton } from "@/components/forms/OpenFormButton";
 import { SiteSearch } from "@/components/search/SiteSearch";
-import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { NavLink } from "@/components/ui/NavLink";
 import { MobileHeader } from "./MobileHeader";
@@ -23,9 +23,9 @@ export function Header() {
               {item.label}
             </NavLink>
           ))}
-          <Button size="md" icon="arrow-right">
+          <OpenFormButton form="subscribe" size="md" icon="arrow-right">
             Join Our Community
-          </Button>
+          </OpenFormButton>
         </nav>
       </div>
 

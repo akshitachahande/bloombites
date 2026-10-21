@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
+import { OpenFormButton } from "@/components/forms/OpenFormButton";
 import { SiteSearch } from "@/components/search/SiteSearch";
-import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Logo } from "@/components/ui/Logo";
 import { NavLink } from "@/components/ui/NavLink";
@@ -115,9 +115,15 @@ export function MobileHeader() {
             ))}
           </ul>
 
-          <Button size="md" icon="arrow-right" className="self-start" onClick={closeMenu}>
+          <OpenFormButton
+            form="subscribe"
+            size="md"
+            icon="arrow-right"
+            className="self-start"
+            onClick={closeMenu}
+          >
             Join Our Community
-          </Button>
+          </OpenFormButton>
         </nav>
       </div>
     </div>

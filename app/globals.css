@@ -8,6 +8,7 @@
   --color-ink: #1f1f1f;
   --color-muted: #666363;
   --color-disabled: rgb(167 167 167 / 0.53);
+  --color-error: #b4434f;
 
   --font-display: var(--font-oswald), "Oswald", sans-serif;
   --font-body: var(--font-aldrich), "Aldrich", sans-serif;

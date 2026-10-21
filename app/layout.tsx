@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Aldrich, Oswald } from "next/font/google";
+import { FormsProvider } from "@/components/forms/FormsProvider";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SearchProvider } from "@/components/search/SearchContext";
@@ -30,10 +31,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${oswald.variable} ${aldrich.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <SearchProvider>
-          <Header />
-          {children}
-        </SearchProvider>
+        <FormsProvider>
+          <SearchProvider>
+            <Header />
+            {children}
+          </SearchProvider>
+        </FormsProvider>
         <Footer />
       </body>
     </html>
