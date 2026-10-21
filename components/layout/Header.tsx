@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { NavLink } from "@/components/ui/NavLink";
 import { SearchBar } from "@/components/ui/SearchBar";
+import { MobileHeader } from "./MobileHeader";
 import { NAV_ITEMS } from "./nav-items";
 
-/** Figma "Nav/Nav Header Desktop" (14:188). */
+/** Figma "Nav/Nav Header Desktop" (14:188); below lg, the mobile header. */
 export function Header() {
   return (
     <header className="bg-cream pt-8">
@@ -27,6 +28,8 @@ export function Header() {
           </Button>
         </nav>
       </div>
+
+      <MobileHeader />
     </header>
   );
 }
