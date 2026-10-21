@@ -1,8 +1,6 @@
-import { ProductCard } from "@/components/cards/ProductCard";
 import { Blossom } from "@/components/ui/Blossom";
 import { Button } from "@/components/ui/Button";
-import { Carousel } from "@/components/ui/Carousel";
-import { PRODUCTS } from "@/data/products";
+import { FeaturedProducts } from "./FeaturedProducts";
 
 /** Figma "Featured Items" (desktop 19:940, mobile 24:3904). */
 export function FeaturedBakes() {
@@ -43,21 +41,7 @@ export function FeaturedBakes() {
           </div>
         </div>
 
-        {/* Mobile: one-at-a-time carousel */}
-        <Carousel label="Featured bakes" className="relative sm:hidden">
-          {PRODUCTS.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </Carousel>
-
-        {/* sm+: 2×2 grid of featured bakes */}
-        <ul className="relative hidden justify-center gap-x-20 gap-y-[25px] sm:grid sm:grid-cols-[repeat(2,250px)]">
-          {PRODUCTS.map((product) => (
-            <li key={product.id}>
-              <ProductCard product={product} />
-            </li>
-          ))}
-        </ul>
+        <FeaturedProducts />
       </div>
     </section>
   );

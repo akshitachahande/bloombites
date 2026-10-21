@@ -1,8 +1,8 @@
 import Link from "next/link";
+import { SiteSearch } from "@/components/search/SiteSearch";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { NavLink } from "@/components/ui/NavLink";
-import { SearchBar } from "@/components/ui/SearchBar";
 import { MobileHeader } from "./MobileHeader";
 import { NAV_ITEMS } from "./nav-items";
 
@@ -15,7 +15,7 @@ export function Header() {
           <Logo size="large" preload />
         </Link>
 
-        <SearchBar className="w-full max-w-[428px] min-w-[220px]" />
+        <SiteSearch className="w-full max-w-[428px] min-w-[220px]" />
 
         <nav aria-label="Main" className="flex shrink-0 items-center gap-4 py-5">
           {NAV_ITEMS.map((item) => (

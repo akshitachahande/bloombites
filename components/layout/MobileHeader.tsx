@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
+import { SiteSearch } from "@/components/search/SiteSearch";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Logo } from "@/components/ui/Logo";
 import { NavLink } from "@/components/ui/NavLink";
-import { SearchBar } from "@/components/ui/SearchBar";
 import { NAV_ITEMS } from "./nav-items";
 
 const ICON_BUTTON =
@@ -71,7 +71,7 @@ export function MobileHeader() {
       </div>
 
       <div id={searchId} hidden={!searchOpen} className="px-4 pb-4">
-        <SearchBar autoFocus={searchOpen} />
+        <SiteSearch autoFocus={searchOpen} />
       </div>
 
       {/* Drawer */}
