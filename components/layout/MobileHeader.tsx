@@ -10,7 +10,7 @@ import { SearchBar } from "@/components/ui/SearchBar";
 import { NAV_ITEMS } from "./nav-items";
 
 const ICON_BUTTON =
-  "inline-flex size-11 items-center justify-center rounded-full text-ink focus-visible:outline-2 focus-visible:outline-olive";
+  "inline-flex size-11 items-center justify-center rounded-full text-olive focus-visible:outline-2 focus-visible:outline-olive";
 
 /** Figma "Nav/Nav Header Mobile" (14:162) plus a slide-in menu drawer. */
 export function MobileHeader() {
