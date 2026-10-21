@@ -2,6 +2,8 @@ import { Fragment } from "react";
 import { Button } from "@/components/ui/Button";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Logo } from "@/components/ui/Logo";
+import { NavLink } from "@/components/ui/NavLink";
+import { SearchBar } from "@/components/ui/SearchBar";
 
 const ICON_NAMES: IconName[] = [
   "arrow-right",
@@ -41,6 +43,18 @@ export default function Home() {
         <span className="rounded-2xl bg-olive p-2">
           <Logo type="blossom" size="large" />
         </span>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-6">
+        <SearchBar className="w-[428px]" />
+        <nav className="flex gap-4">
+          <NavLink href="#">Shop</NavLink>
+          <NavLink href="#">Categories</NavLink>
+        </nav>
+        <nav className="flex gap-4 rounded-xl bg-olive px-4">
+          <NavLink href="#" color="cream">About</NavLink>
+          <NavLink href="#" color="cream">Contact</NavLink>
+        </nav>
       </div>
 
       <div className="grid grid-cols-[repeat(4,max-content)] items-center gap-6">
