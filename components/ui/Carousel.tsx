@@ -9,6 +9,8 @@ type CarouselProps = {
   children: ReactNode;
   /** Width classes for the viewport — one item is shown at a time. */
   viewportClassName?: string;
+  /** Space between the arrows and the slide. */
+  gapClassName?: string;
   className?: string;
 };
 
@@ -20,7 +22,13 @@ const ARROW =
  * One-at-a-time carousel from the mobile Figma frames: olive circle arrows
  * either side of a scroll-snap track, so swiping works as well as the arrows.
  */
-export function Carousel({ label, children, viewportClassName = "w-[250px]", className = "" }: CarouselProps) {
+export function Carousel({
+  label,
+  children,
+  viewportClassName = "w-[250px]",
+  gapClassName = "gap-5",
+  className = "",
+}: CarouselProps) {
   const trackRef = useRef<HTMLUListElement>(null);
   const [index, setIndex] = useState(0);
   const items = Children.toArray(children);
@@ -43,7 +51,7 @@ export function Carousel({ label, children, viewportClassName = "w-[250px]", cla
       role="region"
       aria-roledescription="carousel"
       aria-label={label}
-      className={`flex items-center justify-center gap-5 ${className}`}
+      className={`flex items-center justify-center ${gapClassName} ${className}`}
     >
       <button
         type="button"
