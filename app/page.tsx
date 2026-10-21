@@ -5,7 +5,7 @@ import { OrderCTA } from "@/components/sections/OrderCTA";
 
 export default function Home() {
   return (
-    <main className="flex-1">
+    <main id="main" tabIndex={-1} className="flex-1 outline-none">
       <Hero />
       <FeaturedBakes />
       <Branches />
