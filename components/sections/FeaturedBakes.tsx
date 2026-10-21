@@ -1,5 +1,5 @@
+import { ViewAllButton } from "@/components/search/ViewAllButton";
 import { Blossom } from "@/components/ui/Blossom";
-import { Button } from "@/components/ui/Button";
 import { FeaturedProducts } from "./FeaturedProducts";
 
 /** Figma "Featured Items" (desktop 19:940, mobile 24:3904). */
@@ -35,9 +35,7 @@ export function FeaturedBakes() {
               our guests can’t stop ordering. Fresh from the oven, perfectly green, and made to pair
               with your favorite latte.
             </p>
-            <Button href="/#featured" icon="arrow-right" className="mt-[30px] text-2xl lg:mt-10">
-              View All Pastries
-            </Button>
+            <ViewAllButton className="mt-[30px] text-2xl lg:mt-10" />
           </div>
         </div>
 
