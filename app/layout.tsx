@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Aldrich, Oswald } from "next/font/google";
+import { Header } from "@/components/layout/Header";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -26,7 +27,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${oswald.variable} ${aldrich.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
