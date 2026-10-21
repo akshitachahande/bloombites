@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+import { Button } from "@/components/ui/Button";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Logo } from "@/components/ui/Logo";
 
@@ -39,6 +41,19 @@ export default function Home() {
         <span className="rounded-2xl bg-olive p-2">
           <Logo type="blossom" size="large" />
         </span>
+      </div>
+
+      <div className="grid grid-cols-[repeat(4,max-content)] items-center gap-6">
+        {(["xs", "sm", "md", "lg"] as const).map((s) => (
+          <Fragment key={s}>
+            <Button size={s} icon="arrow-right">Button</Button>
+            <Button size={s} icon="arrow-right" className="bg-cream! text-olive! shadow-[inset_0_0_0_2px_var(--color-olive)]!">
+              Button
+            </Button>
+            <Button size={s} variant="blossom" icon="arrow-right">Button</Button>
+            <Button size={s} icon="arrow-right" disabled>Button</Button>
+          </Fragment>
+        ))}
       </div>
     </main>
   );
