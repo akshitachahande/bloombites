@@ -15,7 +15,7 @@ export function NavLink({ color = "green", className = "", ...props }: NavLinkPr
   return (
     <Link
       {...props}
-      className={`inline-flex items-center justify-center p-2.5 text-base leading-6 whitespace-nowrap underline-offset-4 hover:underline focus-visible:underline focus-visible:outline-none ${COLORS[color]} ${className}`}
+      className={`inline-flex items-center justify-center bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-clip-content bg-origin-content bg-bottom bg-no-repeat p-2.5 text-base leading-6 whitespace-nowrap transition-[background-size] duration-300 ease-out hover:bg-[length:100%_1px] focus-visible:bg-[length:100%_1px] focus-visible:outline-none ${COLORS[color]} ${className}`}
     />
   );
 }

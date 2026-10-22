@@ -23,17 +23,19 @@ export function BranchCard({ branch, priority = "2nd", className = "" }: BranchC
   const s = SIZES[priority];
   return (
     <article
-      className={`flex flex-col items-center gap-[13px] border-4 border-olive p-4 ${s.card} ${className}`}
+      className={`group flex flex-col items-center gap-[13px] border-4 border-olive p-4 transition-[translate,box-shadow] duration-300 ease-out hover:shadow-[0_18px_40px_-20px_rgb(31_31_31/0.45)] motion-safe:hover:-translate-y-2 ${s.card} ${className}`}
     >
-      <Image
-        src={branch.image}
-        alt={branch.alt}
-        width={s.w}
-        height={s.h}
-        sizes={`${s.w}px`}
-        className={`object-cover ${s.image}`}
-        style={{ width: s.w, height: s.h }}
-      />
+      <div className={`overflow-hidden ${s.image}`}>
+        <Image
+          src={branch.image}
+          alt={branch.alt}
+          width={s.w}
+          height={s.h}
+          sizes={`${s.w}px`}
+          className="object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-105"
+          style={{ width: s.w, height: s.h }}
+        />
+      </div>
       <div className="flex w-full items-center justify-between gap-2">
         <h3 className="text-xl leading-6 text-black">{branch.name}</h3>
         <Button

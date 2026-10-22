@@ -44,6 +44,7 @@ export function Modal({ open, onClose, title, description, children }: ModalProp
       aria-labelledby={titleId}
       aria-describedby={description ? descId : undefined}
       onClose={onClose}
+      data-animated
       onClick={(e) => e.target === ref.current && onClose()}
       className="m-auto w-[min(480px,calc(100vw-32px))] rounded-[32px] bg-cream p-0 text-ink shadow-2xl backdrop:bg-ink/50"
     >

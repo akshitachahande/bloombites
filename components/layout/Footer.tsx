@@ -18,7 +18,7 @@ export function Footer() {
       id="contact"
       className="bg-olive px-6 pt-5 pb-6 text-cream lg:px-[130px] lg:py-[50px]"
     >
-      <div className="mx-auto flex max-w-[1180px] flex-col items-center gap-4 lg:flex-row lg:justify-between lg:gap-8">
+      <div data-reveal className="mx-auto flex max-w-[1180px] flex-col items-center gap-4 lg:flex-row lg:justify-between lg:gap-8">
         <Logo type="blossom-white" size="medium" className="lg:size-[120px]" />
 
         <div className="flex flex-col items-center gap-3 lg:gap-[17px]">
@@ -56,7 +56,7 @@ function SocialLinks({ size }: { size: number }) {
       <a
         href={s.href}
         aria-label={s.label}
-        className="flex rounded-full transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream"
+        className="flex rounded-full transition-[opacity,translate] duration-200 hover:opacity-75 motion-safe:hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream"
         {...(s.href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
       >
         <Icon name={s.icon} size={size} />

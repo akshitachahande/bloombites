@@ -21,8 +21,9 @@ const VARIANTS = {
 } as const;
 
 const BASE =
-  "inline-flex items-center justify-center gap-2 rounded-pill leading-6 whitespace-nowrap transition-colors duration-200 " +
-  "hover:bg-cream hover:text-olive hover:shadow-[inset_0_0_0_2px_var(--color-olive)] " +
+  "group inline-flex items-center justify-center gap-2 rounded-pill leading-6 whitespace-nowrap " +
+  "transition-[color,background-color,box-shadow,translate] duration-200 motion-safe:active:translate-y-px " +
+  "hover:bg-cream hover:text-olive hover:shadow-[inset_0_0_0_2px_var(--color-olive)] motion-safe:hover:-translate-y-0.5 " +
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink " +
   "disabled:pointer-events-none disabled:bg-disabled disabled:text-muted disabled:shadow-none " +
   "aria-disabled:pointer-events-none aria-disabled:bg-disabled aria-disabled:text-muted aria-disabled:shadow-none";
@@ -60,7 +61,13 @@ export function Button(props: ButtonProps) {
   const content = (
     <>
       {children}
-      {icon && <Icon name={icon} size={size === "lg" ? 24 : 20} />}
+      {icon && (
+        <Icon
+          name={icon}
+          size={size === "lg" ? 24 : 20}
+          className="transition-transform duration-200 motion-safe:group-hover:translate-x-1"
+        />
+      )}
     </>
   );
 
