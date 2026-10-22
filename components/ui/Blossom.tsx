@@ -34,7 +34,8 @@ export function Blossom({
     left,
     right,
     rotate: `${rotate}deg`,
-    animationDelay: `${delay}s`,
+    // Quick staggered pop-in, then the slower float phase offset.
+    animationDelay: `${delay * 0.12}s, ${delay}s`,
   };
   return (
     <Image

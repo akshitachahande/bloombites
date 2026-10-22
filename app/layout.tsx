@@ -3,6 +3,7 @@ import { Aldrich, Oswald } from "next/font/google";
 import { FormsProvider } from "@/components/forms/FormsProvider";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { RevealObserver } from "@/components/motion/RevealObserver";
 import { SearchProvider } from "@/components/search/SearchContext";
 import "./globals.css";
 
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </SearchProvider>
         </FormsProvider>
         <Footer />
+        <RevealObserver />
       </body>
     </html>
   );
