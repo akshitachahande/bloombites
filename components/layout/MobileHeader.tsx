@@ -41,7 +41,7 @@ export function MobileHeader() {
 
   return (
     <div className="lg:hidden">
-      <div className="flex h-[95px] items-center justify-between px-2.5">
+      <div className="flex h-[95px] animate-drop items-center justify-between px-2.5">
         <button
           ref={menuButtonRef}
           type="button"

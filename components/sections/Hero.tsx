@@ -21,19 +21,18 @@ export function Hero() {
               <Blossom width={106} height={114} rotate={51.68} top={-115} left={8.6} />
               <Blossom width={72.9} height={78.5} rotate={3.86} top={-22.6} left={489.6} delay={2} />
             </span>
-            <span className="relative">
-              A Quiet Bloom
-              <br />
+            <span className="relative block animate-rise">A Quiet Bloom</span>
+            <span className="relative block animate-rise [animation-delay:150ms]">
               in Every Sip
             </span>
           </h1>
 
-          <p className="mt-4 max-w-[306px] text-xs leading-[25px] lg:mt-[51px] lg:max-w-[523px] lg:px-[13px] lg:text-xl lg:leading-[35px]">
+          <p className="mt-4 max-w-[306px] animate-rise [animation-delay:300ms] text-xs leading-[25px] lg:mt-[51px] lg:max-w-[523px] lg:px-[13px] lg:text-xl lg:leading-[35px]">
             We whisk fine matcha with floral touches to create cups that feel like a gentle pause
             in your day—warm, delicate, and quietly uplifting, from first sip to last.
           </p>
 
-          <div className="mt-[30px] flex flex-col items-start gap-[30px] lg:mt-[51px] lg:flex-row lg:gap-[63px]">
+          <div className="mt-[30px] flex animate-rise flex-col items-start gap-[30px] [animation-delay:450ms] lg:mt-[51px] lg:flex-row lg:gap-[63px]">
             <Button href="/#featured">Order Online</Button>
             <Button href="/#branches" variant="blossom" icon="arrow-right">
               Visit Bloom Bites
@@ -48,7 +47,7 @@ export function Hero() {
             fill
             loading="eager"
             sizes="524px"
-            className="rounded-t-[300px] object-cover"
+            className="animate-arch rounded-t-[300px] object-cover [animation-delay:200ms]"
           />
           <div aria-hidden>
             <Blossom width={72.9} height={78.5} rotate={3.86} top={556.4} left={-52.4} delay={1} />

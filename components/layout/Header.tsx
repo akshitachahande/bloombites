@@ -10,7 +10,7 @@ import { NAV_ITEMS } from "./nav-items";
 export function Header() {
   return (
     <header className="bg-cream pt-8">
-      <div className="mx-auto hidden h-[89px] max-w-[1440px] items-center justify-between gap-4 px-8 lg:flex xl:px-[130px]">
+      <div className="mx-auto hidden h-[89px] animate-drop max-w-[1440px] items-center justify-between gap-4 px-8 lg:flex xl:px-[130px]">
         <Link href="/" aria-label="Bloom Bites home" className="shrink-0">
           <Logo size="large" preload />
         </Link>
