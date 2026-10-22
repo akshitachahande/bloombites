@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { ProductCard } from "@/components/cards/ProductCard";
 import { useSearch } from "@/components/search/SearchContext";
 import { Carousel } from "@/components/ui/Carousel";
@@ -31,15 +32,21 @@ export function FeaturedProducts() {
       ) : (
         <>
           {/* Remount on a new query so the carousel resets to the first slide. */}
-          <Carousel key={q} label="Featured bakes" className="sm:hidden">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </Carousel>
+          <div data-reveal className="sm:hidden">
+            <Carousel key={q} label="Featured bakes">
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </Carousel>
+          </div>
 
           <ul className="hidden justify-center gap-x-20 gap-y-[25px] sm:grid sm:grid-cols-[repeat(2,250px)]">
-            {products.map((product) => (
-              <li key={product.id}>
+            {products.map((product, i) => (
+              <li
+                key={product.id}
+                data-reveal="zoom"
+                style={{ "--reveal-delay": `${i * 100}ms` } as CSSProperties}
+              >
                 <ProductCard product={product} />
               </li>
             ))}

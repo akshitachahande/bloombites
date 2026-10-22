@@ -23,19 +23,24 @@ export function FeaturedBakes() {
           />
 
           <div className="relative lg:pt-[29px]">
-            <p className="flex h-11 items-center text-xl leading-[35px]">Featured Matcha Bakes</p>
+            <p data-reveal="left" className="flex h-11 items-center text-xl leading-[35px]">
+              Featured Matcha Bakes
+            </p>
             <h2
               id="featured-heading"
-              className="max-w-[377px] font-display text-[40px] leading-[85px] font-bold text-olive lg:mt-[26px] lg:max-w-none lg:text-[70px]"
+              data-reveal="left"
+              className="[--reveal-delay:100ms] max-w-[377px] font-display text-[40px] leading-[85px] font-bold text-olive lg:mt-[26px] lg:max-w-none lg:text-[70px]"
             >
               Little Bites, Big Matcha Moments
             </h2>
-            <p className="mt-4 max-w-[315px] text-xs leading-[25px] lg:mt-10 lg:max-w-[497px] lg:text-xl lg:leading-[35px]">
+            <p data-reveal="left" className="mt-4 max-w-[315px] [--reveal-delay:200ms] text-xs leading-[25px] lg:mt-10 lg:max-w-[497px] lg:text-xl lg:leading-[35px]">
               From crisp croissants dipped in matcha to soft, floral macarons, these are the bakes
               our guests can’t stop ordering. Fresh from the oven, perfectly green, and made to pair
               with your favorite latte.
             </p>
-            <ViewAllButton className="mt-[30px] text-2xl lg:mt-10" />
+            <div data-reveal className="mt-[30px] [--reveal-delay:300ms] lg:mt-10">
+              <ViewAllButton className="text-2xl" />
+            </div>
           </div>
         </div>
 
